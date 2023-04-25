@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PointR</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+
+        <!-- Add the tab links -->
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'vehicleConfig')" id="defaultOpen">Vehicle</button>
+            <button class="tablinks" onclick="openTab(event, 'eventConfig')">Simulation</button>
+            <button class="tablinks" onclick="openTab(event, 'dataAnalysis')">Analysis</button>
+        </div>
+  
+        <!-- Wrap the existing content in a new div with an id for the first tab -->
+        <div id="vehicleConfig" class="tabcontent">
+            <div class="container">
+                <div class="left">
+                    <div class="fieldset-grid">
+                        <form id="vehicle-parameters">
+                            <fieldset>
+                                <legend>Inertia</legend>
+                                <label for="vehicle-mass">Vehicle Mass:</label>
+                                <input type="text" id="vehicle-mass" name="vehicle_mass" value="1000">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Aerodynamics</legend>
+                                <label for="drag-coefficient">Drag Coefficient:</label>
+                                <input type="text" id="drag-coefficient" name="drag_coefficient" value="0.34">
+                                <label for="lift-coefficient">Lift Coefficient:</label>
+                                <input type="text" id="lift-coefficient" name="lift_coefficient" value="-0.1">
+                                <label for="frontal-area">Frontal Area:</label>
+                                <input type="text" id="frontal-area" name="frontal_area" value="1.8">
+                                <label for="air-density">Air Density:</label>
+                                <input type="text" id="air-density" name="air_density" value="1.293">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Tires</legend>
+                                <label for="tire-radius">Tire Radius:</label>
+                                <input type="text" id="tire-radius" name="tire_radius" value="0.308">
+                                <label for="rolling-resistance">Rolling Resistance:</label>
+                                <input type="text" id="rolling-resistance" name="rolling_resistance" value="0.03">
+                                <label for="longitudinal-friction">Long. Friction Coeff.:</label>
+                                <input type="text" id="longitudinal-friction" name="longitudinal_friction" value="1.2">
+                                <label for="lateral-friction">Lat. Friction Coeff.:</label>
+                                <input type="text" id="lateral-friction" name="lateral_friction" value="1.2">
+                            </fieldset>
+                        </form>
+                        <form id="vehicle-parameters">
+                            <fieldset>
+                                <legend>Drivetrain</legend>
+                                <label for="drive-type">Drive Type:</label>
+                                <select id="drive-type" name="drive_type">
+                                <option value="option1">Front Wheel Drive</option>
+                                <option value="option2" selected>Rear Wheel Drive</option>
+                                <option value="option3">All Wheel Drive</option>
+                                </select>
+                                <label for="thermal-efficiency">Thermal Efficiency:</label>
+                                <input type="text" id="thermal-efficiency" name="thermal_efficiency" value="0.25">
+                                <label for="fuel-energy-density">Fuel Energy Density:</label>
+                                <input type="text" id="fuel-energy-density" name="fuel_energy_density" value="46000000">
+                                <label for="final-drive-ratio">Final Drive Ratio:</label>
+                                <input type="text" id="final-drive-ratio" name="final_drive_ratio" value="4.1">
+                                <label for="drive-efficiency">Drive Efficiency:</label>
+                                <input type="text" id="drive-efficiency" name="drive_efficiency" value="93">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Scale Factors</legend>
+                                <label for="power-factor">Power Factor:</label>
+                                <input type="text" id="power-factor" name="power_factor" value="100">
+                                <label for="aero-factor">Aero Factor:</label>
+                                <input type="text" id="aero-factor" name="aero_factor" value="100">
+                                <label for="grip-factor">Grip Factor:</label>
+                                <input type="text" id="grip-factor" name="grip_factor" value="100">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Simulation</legend>
+                                <button id="button1" class="dark-theme">Load Vehicle</button>
+                                <button id="export-json" class="dark-theme">Save Vehicle</button>
+                                <button id="button1" class="dark-theme">Set Units</button>
+                                <button id="button1" class="dark-theme">Generate Report</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right">
+                        <div class="plot-container">
+                          <div id="plot1"></div>
+                        </div>
+                        <div class="plot-container">
+                          <div id="plot2"></div>
+                        </div>
+                        <div class="plot-container">
+                          <div id="plot3"></div>
+                        </div>
+                        <div class="plot-container">
+                          <div id="plot4"></div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Add empty divs for the second tab -->
+        <div id="eventConfig" class="tabcontent">
+            <!-- Your event configuration content here -->
+        </div>
+
+        <!-- Add empty divs for the third tab -->
+        <div id="dataAnalysis" class="tabcontent">
+            <!-- Your data analysis content here -->
+        </div>
+
+
+
+
+
+
+        
+        <script src="main.js"></script>
+    </body>
+</html>
