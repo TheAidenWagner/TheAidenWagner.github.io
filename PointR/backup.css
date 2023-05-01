@@ -1,0 +1,276 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    /*overflow: hidden;*/
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 33.333%;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  /*.right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #444;
+  }*/
+  
+  .right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #444;
+  }
+  
+  .plot-container {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+    flex-direction: row; /* Add this line */
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 100%;
+  }
+  
+  fieldset {
+    flex-basis: calc(50% - 10px);
+    border: 1px solid #555;
+    padding: 0px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    fieldset {
+      flex-basis: 100%;
+    }
+  }
+  
+  label {
+    text-align: right;
+  }
+  
+  fieldset label {
+    font-size: 7px; /* Adjust the value to your desired font size */
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 0px;
+    background-color: #555;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  option {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  select:focus {
+    outline: none;
+  }
+  
+  legend {
+    padding: 0 0px;
+    font-weight: bold;
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /*
+  html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #333;
+      color: #fff;
+      overflow: hidden;
+    }
+    
+    .container {
+      display: flex;
+      height: 100%;
+    }
+    
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 33.333%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .right {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #444;
+    }
+    
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+      max-height: 100%;
+    }
+    
+    label {
+      text-align: right;
+    }
+    
+    input, select {
+      width: 100%;
+      padding: 5px;
+      background-color: #555;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      margin-right: 10px;
+    }
+    */
+  
+    option {
+      background-color: #444;
+      color: #fff;
+    }
+    
+    select:focus {
+      outline: none;
+    }
+    
+    fieldset {
+      border: 1px solid #555;
+      /*padding: 0px;*/
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    
+    legend {
+      padding: 0 0px;
+      font-weight: bold;
+    }
+    
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  
+    fieldset {
+      border: 1px solid #555;
+      padding: 0px 0px 0px 0px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+   
+    button.dark-theme {
+      background-color: #444;
+      color: #fff;
+      border: none;
+      padding: 0px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 5px 2px;
+      cursor: pointer;
+      width: 100%;
+      height: 24px;
+    }
+  
+    button.dark-theme:hover {
+      background-color: #666;
+    }
+  
+  
+  
+  /* Styling for the tab buttons */
+  .tab button {
+    background-color: #2b2b2b;
+    font-size: 14px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 0px;
+    transition: 0.3s;
+    font-family: Arial, sans-serif;
+    color: white; /* Font color */
+  }
+  
+  .tab button:hover {
+    background-color: #444;
+  }
+  
+  /* Styling for the active tab button */
+  .tab button.active {
+    background-color: #777;
+  }
+  
+  /* Background color for the tab bar */
+  .tab {
+    overflow: hidden;
+    background-color: #2b2b2b; /* Match the tab button background color */
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 0px 0px;
+    border: none; /* Remove the border */
+    border-top: none; /* Remove the border-top specifically */
+  }
+  
+  .tabpanel {
+    border-bottom: none;
+  }
+  
+  button::-moz-focus-inner {
+    border: 0;
+  }
+  
